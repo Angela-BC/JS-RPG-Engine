@@ -5,6 +5,4 @@ class game {
     }
 }
 
-export default function(path){
-    return new game(path)
-}
+export default game

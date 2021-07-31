@@ -1,4 +1,5 @@
 import loadGame from './utils/loader.js'
+import { writeObject } from '../utils/debug/objects.js'
 
 export default class game {
     constructor(path, root){
@@ -10,6 +11,7 @@ export default class game {
     start(contentId) {
         loadGame(this.path, this.root).then(game => {
             this.game=game
+            writeObject('debug', this.game)
         })
     }
 
